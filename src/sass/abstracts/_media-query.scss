@@ -1,0 +1,42 @@
+@media (max-width: 75em) {
+	#root {
+		header {
+			.social-nav {
+				&__text {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 65em) {
+	#root {
+		header {
+			.main-nav {
+				width: 100%;
+				justify-content: space-between;
+				gap: 0;
+			}
+			.social-nav {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 45em) {
+	#root {
+		header {
+			.main-nav {
+				.main-nav__list {
+					display: none;
+				}
+			}
+
+			.btn-mobile-nav {
+				display: block;
+			}
+		}
+	}
+}

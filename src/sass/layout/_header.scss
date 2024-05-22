@@ -1,0 +1,150 @@
+@use "../abstracts" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+header {
+	background-color: #2d2e32;
+	height: 120px;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 4rem 10rem;
+
+	.main-nav {
+		display: flex;
+		align-items: center;
+		gap: 20rem;
+
+		.name {
+			text-decoration: none;
+			.firstName,
+			.lastName {
+				font-family: "Rubik", sans-serif;
+				font-size: 1.8rem;
+
+				color: $text-primary-color;
+			}
+
+			.firstName {
+				font-weight: 500;
+			}
+
+			.lastName {
+				font-weight: 200;
+			}
+		}
+
+		.main-nav__list {
+			list-style: none;
+			display: flex;
+			gap: 45px;
+			font-weight: 400;
+			font-size: 1.2rem;
+			letter-spacing: 1.2px;
+			li {
+				a {
+					&:link,
+					&:visited {
+						text-decoration: none;
+						color: #ffffff;
+						position: relative;
+					}
+					&:hover,
+					&:active {
+						color: #00ff7f;
+						&::before {
+							content: "<";
+							color: #00ff7f;
+							position: absolute;
+							left: 0;
+							transform: translateX(-200%);
+						}
+
+						&::after {
+							content: ">";
+							color: #00ff7f;
+							position: absolute;
+							right: 0;
+							transform: translateX(200%);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.social-nav {
+		&__list {
+			list-style: none;
+			display: flex;
+			align-items: center;
+			gap: 45px;
+		}
+
+		&__link {
+			color: white;
+			text-decoration: none;
+
+			&:hover {
+				color: $text-secondary-color;
+				.social-nav__text {
+					color: $text-secondary-color;
+				}
+			}
+		}
+
+		&__icon-wrapper {
+			display: flex;
+			align-items: center;
+			gap: 1.2rem;
+
+			&--mail {
+				padding: 2rem;
+				background-color: #40494a;
+				border-radius: 50%;
+				transition: background-color 0.3s ease, transform 0.3s ease;
+
+				&:hover {
+					background-color: #00ff7f;
+					transform: scale(1.1);
+
+					> .icon {
+						&.icon-envelope {
+							color: #40494a;
+						}
+					}
+				}
+			}
+
+			.icon {
+				font-size: 2rem;
+
+				&.icon-envelope {
+					color: #00ff7f;
+				}
+			}
+		}
+
+		&__text {
+			font-family: "Roboto", sans-serif;
+			font-size: 1.2rem;
+			color: #6f7072;
+		}
+	}
+
+	.btn-mobile-nav {
+		z-index: 9999;
+		border: none;
+		background: none;
+		cursor: pointer;
+		display: none;
+
+		.icon-mobile-nav {
+			color: $text-primary-color;
+			height: 2.8rem;
+			width: 2.8rem;
+		}
+	}
+}
