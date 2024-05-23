@@ -54,9 +54,7 @@ export default function Navbar(){
             </li>
           </ul>
          </nav>
-         <button className="btn-mobile-nav" onClick={(event) => {
-            console.log(event);
-            console.log(isMenuOpen);
+         <button className="btn-mobile-nav" onClick={() => {
             setIsMenuOpen(!isMenuOpen)
          }}>
          <FontAwesomeIcon icon={faBars} className="icon-mobile-nav" />
