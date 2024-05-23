@@ -70,3 +70,11 @@
 		}
 	}
 }
+
+@media (max-width: 30em) {
+	#root {
+		header {
+			padding: 4rem 4rem;
+		}
+	}
+}
