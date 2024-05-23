@@ -30,7 +30,35 @@
 		header {
 			.main-nav {
 				.main-nav__list {
+					position: absolute;
+					top: 12rem;
+					left: 0;
 					display: none;
+					flex-direction: column;
+					background-color: #2d2e32;
+
+					width: 100%;
+					gap: 0;
+
+					&.open {
+						display: flex;
+					}
+
+					li {
+						width: 100%;
+						box-sizing: border-box;
+						padding: 20px;
+						border-top: 1px solid white;
+						text-align: center;
+
+						&:hover {
+							background-color: #424347;
+						}
+
+						&:last-child {
+							border-bottom: 1px solid white;
+						}
+					}
 				}
 			}
 

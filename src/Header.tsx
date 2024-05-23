@@ -1,16 +1,20 @@
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { useState } from 'react';
 
-import { faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Navbar(){
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
    return (
       <header>
       
       <nav className="main-nav">
       <a className="name" href="#"><span className="firstName">Ruben</span> <span className="lastName">Neven</span></a>
-          <ul className="main-nav__list">
+      <ul className={`main-nav__list ${isMenuOpen ? 'open' : ''}`}>
               <li>
                   <a  href="#">About</a>
               </li>
@@ -50,7 +54,11 @@ export default function Navbar(){
             </li>
           </ul>
          </nav>
-         <button className="btn-mobile-nav">
+         <button className="btn-mobile-nav" onClick={(event) => {
+            console.log(event);
+            console.log(isMenuOpen);
+            setIsMenuOpen(!isMenuOpen)
+         }}>
          <FontAwesomeIcon icon={faBars} className="icon-mobile-nav" />
          </button>
          
