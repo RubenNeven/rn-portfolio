@@ -1,11 +1,35 @@
 @use "./variables" as *;
 
+@media (max-width: 100em) {
+	#root {
+		#hero {
+			&::before {
+				background-size: 65vh;
+				background-position: 60% bottom;
+				opacity: 0.45;
+			}
+
+			.hero-text {
+				padding-left: 0;
+				width: 100%;
+				align-items: center;
+			}
+		}
+	}
+}
+
 @media (max-width: 75em) {
 	#root {
 		header {
 			.social-nav {
 				&__text {
 					display: none;
+				}
+			}
+
+			.main-nav {
+				.main-nav__list {
+					margin-left: 0;
 				}
 			}
 		}
@@ -16,7 +40,6 @@
 	#root {
 		header {
 			.main-nav {
-				width: 100%;
 				justify-content: space-between;
 				gap: 0;
 			}
@@ -55,6 +78,20 @@
 
 						&:hover {
 							background-color: #424347;
+
+							& > a {
+								color: #00ff7f;
+								&:hover,
+								&:active {
+									&::before {
+										content: "";
+									}
+
+									&::after {
+										content: "";
+									}
+								}
+							}
 						}
 
 						&:last-child {
@@ -68,6 +105,28 @@
 				display: block;
 			}
 		}
+
+		#hero {
+			align-items: flex-start;
+			padding-top: 10rem;
+			&::before {
+				background-size: 40vh;
+			}
+
+			.hero-text {
+				h1 {
+					font-size: 4.8rem;
+				}
+
+				p {
+					font-size: 2.8rem;
+				}
+
+				.hero__cta {
+					display: none;
+				}
+			}
+		}
 	}
 }
 
@@ -75,6 +134,53 @@
 	#root {
 		header {
 			padding: 4rem 4rem;
+		}
+
+		#hero {
+			.hero-text {
+				h1 {
+					font-size: 3.8rem;
+				}
+
+				p {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 25em) {
+	#root {
+		#hero {
+			padding-top: 5rem;
+		}
+	}
+}
+
+@media (max-height: 50em) {
+	#root {
+		#hero {
+			&::before {
+				background-size: 55vh;
+				background-position: 50% bottom;
+			}
+
+			.hero-text {
+				.hero__cta {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-height: 40em) {
+	#root {
+		#hero {
+			&::before {
+				background-size: 50vh;
+			}
 		}
 	}
 }

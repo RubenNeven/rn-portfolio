@@ -10,10 +10,10 @@ export default function Navbar(){
    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
    return (
-      <header>
       
-      <nav className="main-nav">
+      <header>
       <a className="name" href="#"><span className="firstName">Ruben</span> <span className="lastName">Neven</span></a>
+      <nav className="main-nav">
       <ul className={`main-nav__list ${isMenuOpen ? 'open' : ''}`}>
               <li>
                   <a  href="#">About</a>

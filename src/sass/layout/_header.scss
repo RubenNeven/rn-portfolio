@@ -5,44 +5,45 @@
 
 header {
 	background-color: #2d2e32;
-	height: 12rem;
+	height: $header-height;
 	color: #ffffff;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	padding: 4rem 10rem;
+	justify-content: space-around;
+	padding: 4rem 0;
+
+	.name {
+		text-decoration: none;
+		.firstName,
+		.lastName {
+			font-family: "Rubik", sans-serif;
+			font-size: 2.2rem;
+
+			color: $text-primary-color;
+		}
+
+		.firstName {
+			font-weight: 500;
+		}
+
+		.lastName {
+			font-weight: 200;
+		}
+	}
 
 	.main-nav {
 		display: flex;
 		align-items: center;
 		gap: 20rem;
 
-		.name {
-			text-decoration: none;
-			.firstName,
-			.lastName {
-				font-family: "Rubik", sans-serif;
-				font-size: 1.8rem;
-
-				color: $text-primary-color;
-			}
-
-			.firstName {
-				font-weight: 500;
-			}
-
-			.lastName {
-				font-weight: 200;
-			}
-		}
-
 		.main-nav__list {
 			list-style: none;
 			display: flex;
-			gap: 45px;
+			gap: 6rem;
 			font-weight: 400;
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 			letter-spacing: 1.2px;
+			margin-left: 10rem;
 			li {
 				a {
 					&:link,
@@ -129,7 +130,7 @@ header {
 
 		&__text {
 			font-family: "Roboto", sans-serif;
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 			color: #6f7072;
 		}
 	}
