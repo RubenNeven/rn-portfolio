@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 #hero {
-	height: calc(100vh - $header-height);
+	height: calc(100dvh - $header-height);
 	background-color: #2d2e32;
 	display: flex;
 	align-items: center;
