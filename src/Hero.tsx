@@ -12,14 +12,8 @@ export default function Hero(){
             <h1>Ruben Neven</h1>
             <p ><span className="skill">{skills}</span><Cursor/>developer </p>
             <div className="hero__cta">
-               <a href="#">
+               <a href="mailto:rubenneven@gmail.com">
                   Let's connect &rarr;
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
                </a>
             </div>
             

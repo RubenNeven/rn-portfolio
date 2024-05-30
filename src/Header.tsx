@@ -29,7 +29,8 @@ export default function Navbar(){
           <nav className="social-nav"> 
           <ul className="social-nav__list">
             <li>
-               <a className="social-nav__link" href="#">
+               <a className="social-nav__link" href="https://www.linkedin.com/in/ruben-neven-a9792a12a/" target="_blank"
+                  rel="noopener noreferrer">
                   <div className="social-nav__icon-wrapper">
                   <FontAwesomeIcon icon={faLinkedinIn} className="icon icon-linkedin"/>
                   
@@ -38,7 +39,8 @@ export default function Navbar(){
                </a>
             </li>
             <li>
-               <a className="social-nav__link" href="#">
+               <a className="social-nav__link" href="https://github.com/RubenNeven" target="_blank"
+                  rel="noopener noreferrer">
                   <div className="social-nav__icon-wrapper">
                   <FontAwesomeIcon icon={faGithub} className="icon icon-github" />
                      <p className="social-nav__text">Github</p>
@@ -46,7 +48,7 @@ export default function Navbar(){
                </a>
             </li>
             <li>
-               <a className="social-nav__link" href="#">
+               <a className="social-nav__link" href="mailto:rubenneven@gmail.com">
                   <div className="social-nav__icon-wrapper social-nav__icon-wrapper--mail">
                      <FontAwesomeIcon  icon={faEnvelope} className="icon icon-envelope"/>
                   </div>
