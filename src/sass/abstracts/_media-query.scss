@@ -108,6 +108,9 @@
 @media (max-width: 45em) {
 	#root {
 		header {
+			a {
+				display: none;
+			}
 			.main-nav {
 				.main-nav__list {
 					position: absolute;
@@ -168,10 +171,10 @@
 			.hero-text{
 
 				h1 {
-					font-size: 6.2rem;
+					font-size: 5.2rem;
 				}
 				p {
-					font-size: 4.4rem;
+					font-size: 3.6rem;
 				}
 			}
 		}
