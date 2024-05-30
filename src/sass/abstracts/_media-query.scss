@@ -87,6 +87,10 @@
 @media (max-width: 65em) {
   #root {
     header {
+      a {
+        display: none;
+
+      }
       .main-nav {
         justify-content: space-between;
         gap: 0;
@@ -115,10 +119,7 @@
 @media (max-width: 45em) {
   #root {
     header {
-      a {
-        display: none;
 
-      }
 
       .main-nav {
         .main-nav__list {
