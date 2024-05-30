@@ -162,6 +162,9 @@
 		}
 
 		#hero {
+			&::before {
+				opacity: 0.15;
+			}
 			.hero-text{
 
 				h1 {
@@ -185,13 +188,11 @@
 			&::before {
 				background-position: 50% bottom;
 			}
-
-
 			.hero-text{
 				gap: 2rem;
-				transform: translateY(100%);
+
 				h1 {
-					display: none;
+					font-size: 5.2rem;
 				}
 				p {
 					font-size: 3rem;
@@ -200,7 +201,6 @@
 				.hero__cta {
 					margin-top: 1.6rem;
 					font-size: 1.6rem;
-
 					a {
 						padding: 1.4rem 2rem;
 					}
