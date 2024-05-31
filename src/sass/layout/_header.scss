@@ -4,149 +4,154 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 header {
-	background-color: #2d2e32;
-	height: $header-height;
-	color: #ffffff;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	padding: 4rem 0;
+  background-color: #2d2e32;
+  height: $header-height;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4rem 0;
 
-	.name {
-		text-decoration: none;
-		.firstName,
-		.lastName {
-			font-family: "Rubik", sans-serif;
-			font-size: 2.2rem;
+  .name {
+    text-decoration: none;
 
-			color: $text-primary-color;
-		}
+    .firstName,
+    .lastName {
+      font-family: "Rubik", sans-serif;
+      font-size: 2.2rem;
 
-		.firstName {
-			font-weight: 500;
-		}
+      color: $text-primary-color;
+    }
 
-		.lastName {
-			font-weight: 200;
-		}
-	}
+    .firstName {
+      font-weight: 500;
+    }
 
-	.main-nav {
-		display: flex;
-		align-items: center;
-		gap: 20rem;
+    .lastName {
+      font-weight: 200;
+    }
+  }
 
-		.main-nav__list {
-			visibility: hidden;
-			list-style: none;
-			display: flex;
-			gap: 6rem;
-			font-weight: 400;
-			font-size: 1.4rem;
-			letter-spacing: 1.2px;
-			margin-left: 10rem;
-			li {
-				a {
-					&:link,
-					&:visited {
-						text-decoration: none;
-						color: #ffffff;
-						position: relative;
-					}
-					&:hover,
-					&:active {
-						color: #00ff7f;
-						&::before {
-							content: "<";
-							color: #00ff7f;
-							position: absolute;
-							left: 0;
-							transform: translateX(-200%);
-						}
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20rem;
 
-						&::after {
-							content: ">";
-							color: #00ff7f;
-							position: absolute;
-							right: 0;
-							transform: translateX(200%);
-						}
-					}
-				}
-			}
-		}
-	}
+    .main-nav__list {
+      visibility: hidden;
+      list-style: none;
+      display: flex;
+      gap: 6rem;
+      font-weight: 400;
+      font-size: 1.4rem;
+      letter-spacing: 1.2px;
+      margin-left: 10rem;
 
-	.social-nav {
-		&__list {
-			list-style: none;
-			display: flex;
-			align-items: center;
-			gap: 4.4rem;
-		}
+      li {
+        a {
+          &:link,
+          &:visited {
+            text-decoration: none;
+            color: #ffffff;
+            position: relative;
+          }
 
-		&__link {
-			color: white;
-			text-decoration: none;
+          &:hover,
+          &:active {
+            color: #00ff7f;
 
-			&:hover {
-				color: $text-secondary-color;
-				.social-nav__text {
-					color: $text-secondary-color;
-				}
-			}
-		}
+            &::before {
+              content: "<";
+              color: #00ff7f;
+              position: absolute;
+              left: 0;
+              transform: translateX(-200%);
+            }
 
-		&__icon-wrapper {
-			display: flex;
-			align-items: center;
-			gap: 1.2rem;
+            &::after {
+              content: ">";
+              color: #00ff7f;
+              position: absolute;
+              right: 0;
+              transform: translateX(200%);
+            }
+          }
+        }
+      }
+    }
+  }
 
-			&--mail {
-				padding: 2rem;
-				background-color: #40494a;
-				border-radius: 50%;
-				transition: background-color 0.3s ease, transform 0.3s ease;
+  .social-nav {
+    &__list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 4.4rem;
+    }
 
-				&:hover {
-					background-color: #00ff7f;
-					transform: scale(1.1);
+    &__link {
+      color: white;
+      text-decoration: none;
 
-					> .icon {
-						&.icon-envelope {
-							color: #40494a;
-						}
-					}
-				}
-			}
+      &:hover {
+        color: $text-secondary-color;
 
-			.icon {
-				font-size: 2rem;
+        .social-nav__text {
+          color: $text-secondary-color;
+        }
+      }
+    }
 
-				&.icon-envelope {
-					color: #00ff7f;
-				}
-			}
-		}
+    &__icon-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
 
-		&__text {
-			font-family: "Roboto", sans-serif;
-			font-size: 1.4rem;
-			color: #6f7072;
-		}
-	}
+      &--mail {
+        padding: 2rem;
+        background-color: #40494a;
+        border-radius: 50%;
+        transition: background-color 0.3s ease, transform 0.3s ease;
 
-	.btn-mobile-nav {
-		z-index: 9999;
-		border: none;
-		background: none;
-		cursor: pointer;
-		display: none;
+        &:hover {
+          background-color: #00ff7f;
+          transform: scale(1.1);
 
-		.icon-mobile-nav {
-			color: $text-primary-color;
-			height: 2.8rem;
-			width: 2.8rem;
-		}
-	}
+          > .icon {
+            &.icon-envelope {
+              color: #40494a;
+            }
+          }
+        }
+      }
+
+      .icon {
+        font-size: 2rem;
+
+        &.icon-envelope {
+          color: #00ff7f;
+        }
+      }
+    }
+
+    &__text {
+      font-family: "Roboto", sans-serif;
+      font-size: 1.4rem;
+      color: #7d7e80;
+    }
+  }
+
+  .btn-mobile-nav {
+    z-index: 9999;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+
+    .icon-mobile-nav {
+      color: $text-primary-color;
+      height: 2.8rem;
+      width: 2.8rem;
+    }
+  }
 }
